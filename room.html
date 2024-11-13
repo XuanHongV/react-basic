@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel-Management</title>
+    <link rel="stylesheet" href="room.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Novotel</h2>
+            <ul>
+                <li>Dashboard</li>
+                <li>Front desk</li>
+                <li>Guest</li>
+                <li class="active">Room</li>
+                <li>Deal</li>
+                <li>Rate</li>
+            </ul>
+        </aside>
+
+        <main class="main-content">  
+            <div class="room-table">
+                <div class="search">
+                    <input type="text" placeholder="Serch for room and offer...">
+                    <button>Add Room</button>
+                </div>
+                 <header>
+                <th>Rooms</th>
+                </header>
+<!-- Phân loại trạng thái phòng -->
+<div class="room-status-filters">
+    <button class="filter-btn active" onclick="filterRooms('all')">All rooms</button>
+    <button class="filter-btn" onclick="filterRooms('available')">Available</button>
+    <button class="filter-btn" onclick="filterRooms('booked')">Booked</button>
+</div>
+
+<div class="room-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Room number</th>
+                            <th>Bed type</th>
+                            <th>Room floor</th>
+                            <th>Room facility</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#001</td>
+                            <td>Double bed</td>
+                            <td>Floor -1</td>
+                            <td>AC, TV, Towel</td>
+                            <td class="status available">Available</td>
+                        </tr>
+                        <tr>
+                            <td>#002</td>
+                            <td>Single bed</td>
+                            <td>Floor -2</td>
+                            <td>AC, TV, Towel</td>
+                            <td class="status booked">Booked</td>
+                        </tr>
+                        <tr>
+                            <td>#003</td>
+                            <td>VIP</td>
+                            <td>Floor 1</td>
+                            <td>AC, TV, Bathtub</td>
+                            <td class="status booked">Booked</td>
+                        </tr>
+                        <tr>
+                            <td>#004</td>
+                            <td>VIP</td>
+                            <td>Floor -1</td>
+                            <td>AC, TV, Bathtub</td>
+                            <td class="status reserved">Reserved</td>
+                        </tr>
+                        <tr>
+                            <td>#005</td>
+                            <td>VIP</td>
+                            <td>Floor 1</td>
+                            <td>AC, TV, Bathtub</td>
+                            <td class="status available">Available</td>
+                        </tr>
+                        <tr>
+                            <td>#006</td>
+                            <td>VIP</td>
+                            <td>Floor -1</td>
+                            <td>AC, TV, Bathtub</td>
+                            <td class="status reserved">Reserved</td>
+                        </tr>
+                        <tr>
+                            <td>#007</td>
+                            <td>Double</td>
+                            <td>Floor 3</td>
+                            <td>AC, TV, Bathtub</td>
+                            <td class="status booked">Booked</td>
+                        </tr>
+                        <tr>
+                            <td>#008</td>
+                            <td>VIP</td>
+                            <td>Floor -1</td>
+                            <td>AC, TV, Bathtub</td>
+                            <td class="status reserved">Reserved</td>
+                        </tr>
+                        <tr>
+                            <td>#009</td>
+                            <td>VIP</td>
+                            <td>Floor 1</td>
+                            <td>AC, TV, Bathtub</td>
+                            <td class="status available">Available</td>
+                        </tr>
+                        <!-- Thêm các dòng khác tại đây -->
+                    </tbody>
+                </table>
+<!-- Phân trang -->
+<div class="pagination">
+    <a href="#" class="page-btn prev"><i class="fas fa-chevron-left"></i>Previous</a>
+    <a href="#" class="page-btn active">1</a>
+    <a href="#" class="page-btn">2</a>
+    <a href="#" class="page-btn">3</a>
+    <a href="#" class="page-btn next">Next<i class="fas fa-chevron-right"></i></a>
+</div>
+
+</div>
+</div>
+
+            </div>
+        </main>
+    </div>
+    <script src="room.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</body>
+</html>
